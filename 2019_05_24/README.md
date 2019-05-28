@@ -3,7 +3,7 @@
 En esta clase se hizo una revisión muy rápida de un programa sencillo en C que imprime el mensaje hola mundo. Después se mostró la forma como se genera una librería de enlace estático y como la funcionalidad implementada en esta es invocada desde un programa en C.
 
 Se desarrollaron tres programas:
-&nbsp;&nbsp;<li type="disc"><a href= "https://github.com/brayanescobar2019/SistemasOperativos/blob/master/2019_05_24/basico.c"> basico.c </a> </li>
+<li type="disc"><a href= "https://github.com/brayanescobar2019/SistemasOperativos/blob/master/2019_05_24/basico.c"> basico.c </a> </li>
 
 <li type="disc"> <a href= "https://github.com/brayanescobar2019/SistemasOperativos/blob/master/2019_05_24/libfun.c"> libfun.c </a> </li>
    
