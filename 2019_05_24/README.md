@@ -12,15 +12,15 @@ Se desarrollaron tres programas:
    
 <br>Para compilar el programa se llevan a cabo los siguientes pasos:
 
-   <li type="disc">Generar la librería</li> 
-<br>
+   <li type="disc">Generar la librería</li> <br>
+
       gcc -c libfun.c -o libfun.o
       ar rcs libfun.a libfun.o
 
-   <li type="disc">En el paso anterior se generó el archivo libfun.a. Ahora enlazaremos el programa basico.c con la librería libfun.a.</li>
-<br>
+   <li type="disc">En el paso anterior se generó el archivo libfun.a. Ahora enlazaremos el programa basico.c con la librería libfun.a.</li><br>
+
     gcc basico.c -L. -lfun -o basico
 
-   <li type="disc">Finalmente, el programa se ejecuta:</li>
+   <li type="disc">Finalmente, el programa se ejecuta:</li><br>
 
     ./basico
