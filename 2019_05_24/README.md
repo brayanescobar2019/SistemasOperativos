@@ -10,7 +10,7 @@ Se desarrollaron tres programas:
    <li type="disc"><a href= "https://github.com/brayanescobar2019/SistemasOperativos/blob/master/2019_05_24/libfun.h"> libfun.h </a></li>
    
    
-<p>Para compilar el programa se llevan a cabo los siguientes pasos:
+<br>Para compilar el programa se llevan a cabo los siguientes pasos:
 
    <li type="disc">Generar la librería</li> 
 
