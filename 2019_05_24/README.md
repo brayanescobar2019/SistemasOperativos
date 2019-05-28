@@ -5,11 +5,13 @@ En esta clase se hizo una revisión muy rápida de un programa sencillo en C que
 Se desarrollaron tres programas:
 <li type="disc"><a href= "https://github.com/brayanescobar2019/SistemasOperativos/blob/master/2019_05_24/basico.c"> basico.c </a> </li>
 
+<li type="disc"> <a href= "https://github.com/brayanescobar2019/SistemasOperativos/blob/master/2019_05_24/libfun.c"> libfun.c </a> </li>
+   
+   <li type="disc"><a href= "https://github.com/brayanescobar2019/SistemasOperativos/blob/master/2019_05_24/libfun.h"> libfun.h </a></li>
+   
+    
    
    
-   <a href= "https://github.com/brayanescobar2019/SistemasOperativos/blob/master/2019_05_24/libfun.c"> libfun.c </a> 
-   
-   <a href= "https://github.com/brayanescobar2019/SistemasOperativos/blob/master/2019_05_24/libfun.h"> libfun.h </a>
 
 Para compilar el programa se llevan a cabo los siguientes pasos:
 
