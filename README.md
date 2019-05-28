@@ -3,4 +3,4 @@
 
 Este repositorio contiene los codigos relativos a diferentes actuvidades desarrolladas en el curso de sistemas operativos - univalle - mayo-septiembre
 
-<a "https://github.com/brayanescobar2019/SistemasOperativos/tree/master/2019_05_24" 2019_05_24 <a>
+<a href= "https://github.com/brayanescobar2019/SistemasOperativos/tree/master/2019_05_24" 2019_05_24 </a>
