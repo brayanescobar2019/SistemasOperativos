@@ -15,7 +15,7 @@ Se desarrollaron tres programas:
 
 Para compilar el programa se llevan a cabo los siguientes pasos:
 
-  <li type="disc">Generar la librería</li> 
+   <li type="disc">Generar la librería</li> 
 
       gcc -c libfun.c -o libfun.o
       ar rcs libfun.a libfun.o
