@@ -21,6 +21,6 @@ Para compilar el programa se llevan a cabo los siguientes pasos:
 
     gcc basico.c -L. -lfun -o basico
 
-   Finalmente, el programa se ejecuta:
+   <li type="disc">Finalmente, el programa se ejecuta:</li>
 
     ./basico
