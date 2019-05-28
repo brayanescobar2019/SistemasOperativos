@@ -4,21 +4,21 @@ En esta clase se hizo una revisión muy rápida de un programa sencillo en C que
 
 Se desarrollaron tres programas:
 
-    basico.c
+   <a href= "https://github.com/brayanescobar2019/SistemasOperativos/blob/master/2019_05_24/basico.c"> basico.c </a> 
     libfun.c
     libfun.h
 
 Para compilar el programa se llevan a cabo los siguientes pasos:
 
-    Generar la librería
+   Generar la librería
 
-  gcc -c libfun.c -o libfun.o
-  ar rcs libfun.a libfun.o
+      gcc -c libfun.c -o libfun.o
+      ar rcs libfun.a libfun.o
 
-    En el paso anterior se generó el archivo libfun.a. Ahora enlazaremos el programa basico.c con la librería libfun.a.
+   En el paso anterior se generó el archivo libfun.a. Ahora enlazaremos el programa basico.c con la librería libfun.a.
 
-gcc basico.c -L. -lfun -o basico
+    gcc basico.c -L. -lfun -o basico
 
-    Finalmente, el programa se ejecuta:
+   Finalmente, el programa se ejecuta:
 
-./basico
+    ./basico
