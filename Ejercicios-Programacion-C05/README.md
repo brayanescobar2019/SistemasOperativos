@@ -1,4 +1,4 @@
-Aquí va la descripción
+En este espacio se responden las preguntas correspondientes al capítulo 5 (de la 1 a la 7) del libro Operating systems Three Easy Pieces. Además, por cada pregunta se tiene un enlace donde se lleva a un archivo de este repositorio con el código correspondiente.
  
  
  # Pregunta 1
