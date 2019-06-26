@@ -12,7 +12,7 @@ the value of x?
 Respuesta:
 
  # Pregunta 2
- aquí va el enlace
+ * [pregunta2.c](pregunta2.c)
 
 Write a program that opens a file (with the open() system call)
 and then calls fork() to create a new process. Can both the child
@@ -24,7 +24,7 @@ Respuesta:
 
 
  # Pregunta 3
- aquí va el enlace
+ * [pregunta3.c](pregunta3.c)
  
  Write another program using fork(). The child process should
 print “hello”; the parent process should print “goodbye”. You should
