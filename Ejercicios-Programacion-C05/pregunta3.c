@@ -9,12 +9,12 @@ void sig_handler(int signum) {
 }
 
 int main (int argc, char const *argv[]) {
-    int parent_pid = getpid();
+    int pid_padre = getpid();
     int rc = fork();
     if (rc == 0) //child
     {
         printf("hello\n");
-        kill(parent_pid, SIGCONT);
+        kill(pid_padre, SIGCONT);
         exit(0);
     }
     else if (rc > 0) // parent
@@ -28,9 +28,5 @@ int main (int argc, char const *argv[]) {
         signal(SIGCONT, sig_handler); // install signal handler
         pause();
     }
-    else // fork did not succeed
-    {
-        printf("error\n");
-        return 1;
-    }
+  
 }
