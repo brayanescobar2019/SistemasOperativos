@@ -35,7 +35,7 @@ Respuesta:
 
 
  # Pregunta 4
- aquí va el enlace
+ * [pregunta4.c](pregunta4.c)
  
   Write a program that calls fork() and then calls some form of
 exec() to run the program /bin/ls. See if you can try all of the
@@ -47,7 +47,7 @@ Respuesta:
 
 
 # Pregunta 5
-aquí va el enlace
+* [pregunta5.c](pregunta5.c)
 
  Now write a program that uses wait() to wait for the child process
 to finish in the parent. What does wait() return? What happens if
@@ -57,7 +57,7 @@ Respuesta:
 
 
 # Pregunta 6
-aquí va el enlace
+* [pregunta6.c](pregunta6.c)
 
  Write a slight modification of the previous program, this time using waitpid() instead of wait(). When would waitpid() be
 useful?
@@ -66,7 +66,7 @@ Respuesta:
 
 
 # Pregunta 7
-aquí va el enlace
+* [pregunta7.c](pregunta7.c)
 
 Write a program that creates a child process, and then in the child
 closes standard output (STDOUT FILENO). What happens if the child
