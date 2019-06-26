@@ -2,7 +2,7 @@ Aquí va la descripción
  
  
  # Pregunta 1
-  aquí va el enlace
+ * [pregunta1.c] (pregunta1.c)
  
 Write a program that calls fork(). Before calling fork(), have the
 main process access a variable (e.g., x) and set its value to something (e.g., 100). What value is the variable in the child process?
