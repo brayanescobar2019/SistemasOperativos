@@ -9,7 +9,7 @@ int main()
 
     if (rc == 0) // proceso hijo
     {
-        printf("************* Executing Child Process **************\n");
+        printf("ejecutando proceso hijo\n");
         char * const argv[] = {"ls", NULL};
         char * const envp[] = {NULL};
 
