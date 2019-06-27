@@ -7,7 +7,7 @@ int main()
 {
     int rc = fork();
 
-    if (rc == 0) // child
+    if (rc == 0) // proceso hijo
     {
         printf("************* Executing Child Process **************\n");
         char * const argv[] = {"ls", NULL};
@@ -20,7 +20,7 @@ int main()
         //execvp("ls", argv);
         //execvpe("ls", argv, envp); // not declared on my pc. May be work on yours.
     }
-    else if (rc > 0) // parent
+    else if (rc > 0) // proceso padre
     {
         wait(NULL);
     }
