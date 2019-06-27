@@ -33,7 +33,7 @@ int main()
     char * buffer = malloc(sb.st_size);
     read(miArchivo, buffer, sb.st_size);
 
-    printf("Content of file: \n%s", buffer);
+    printf("contenido del archivo: \n%s", buffer);
     close(miArchivo);
     return 0;
 }
