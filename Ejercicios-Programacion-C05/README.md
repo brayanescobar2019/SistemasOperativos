@@ -31,7 +31,7 @@ print “hello”; the parent process should print “goodbye”. You should
 try to ensure that the child process always prints first; can you do
 this without calling wait() in the parent?
 
-Respuesta:
+Respuesta: sí se puede
 
 
  # Pregunta 4
@@ -45,9 +45,9 @@ you think there are so many variants of the same basic call?
 
 Respuesta: el grupo cree que hay varias variantes de exec() porque se pueden usar para problemas específicos, pero hay una relación entre los siguientes tipos de exec() ya que funcionan casi igual:
 
-  execl() y execv() 
-  execlp() y execvp()
-  execle() y execvpe()
+  execl() y execv(),  
+  execlp() y execvp(), 
+  execle() y execvpe().
 
 
 # Pregunta 5
@@ -66,7 +66,8 @@ Respuesta: wait() retorna el id del proceso hijo, en caso de error retorna -1. S
  Write a slight modification of the previous program, this time using waitpid() instead of wait(). When would waitpid() be
 useful?
 
-Respuesta:
+Respuesta: waitpid () se usa cuando queremos esperar un proceso secundario en específico, en lugar de ayudar a que salgan todos los procesos secundarios. Además, nos permite especificar más comportamientos.
+
 
 
 # Pregunta 7
@@ -76,6 +77,7 @@ Write a program that creates a child process, and then in the child
 closes standard output (STDOUT FILENO). What happens if the child
 calls printf() to print some output after closing the descriptor?
 
-Respuesta:
+Respuesta: si cerramos el descriptor de archivo STDOUT, no podremos escribir algo en la pantalla usando printf (). Sin embargo no se produjo ningún error.
+
  
  
