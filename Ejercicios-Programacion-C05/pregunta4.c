@@ -18,7 +18,7 @@ int main()
         //execle("/bin/ls", "ls", NULL, envp);
         //execv("/bin/ls", argv);
         //execvp("ls", argv);
-        //execvpe("ls", argv, envp); // not declared on my pc. May be work on yours.
+        //execvpe("ls", argv, envp); 
     }
     else if (rc > 0) // proceso padre
     {
