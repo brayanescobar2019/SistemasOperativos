@@ -15,7 +15,7 @@ int main()
 
     if (rc == 0)
     {
-        const char * child_msg = "Hello, I am child process. Writing on you\n";
+        const char * child_msg = "Soy el proceso hijo y estoy escribiendo\n";
         printf("proceso hijo escribiendo en el archivo\n");
         write(miArchivo, child_msg , strlen(child_msg));
         exit(0);
@@ -23,7 +23,7 @@ int main()
     else if (rc > 0)
     {
         wait(NULL);
-        const char * parent_msg = "Hello, I am parent process. Writing on you\n";
+        const char * parent_msg = "Soy el proceso padre y estoy escribiendo\n";
         printf("proceso padre escribiendo en el archivo\n");
         write(miArchivo, parent_msg, strlen(parent_msg));
     }
