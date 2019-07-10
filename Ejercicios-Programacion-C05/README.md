@@ -9,7 +9,7 @@ main process access a variable (e.g., x) and set its value to something (e.g., 1
 What happens to the variable when both the child and parent change
 the value of x?
 
-Respuesta:
+Respuesta: el fork() crea un proceso a partir del proceso padre y a este se le llama proceso hijo (es una copia del proceso padre), pero ambos tienen su propio espacio de dirección privada, por lo que uno no puede interferir en el otro. Por ende, cada uno tiene su propia copia de las variables.
 
  # Pregunta 2
  * [pregunta2.c](pregunta2.c)
@@ -20,7 +20,7 @@ and parent access the file descriptor returned by open()? What
 happens when they are writing to the file concurrently, i.e., at the
 same time?
 
-Respuesta:
+Respuesta: tanto el hijo como el padre pueden acceder al descriptor de archivo abierto utilizando open (), además ambos pueden escribir en el archivo pero ya que no usamos wait(), no es seguro cuál es el orden en que lo hacen.
 
 
  # Pregunta 3
@@ -43,7 +43,11 @@ variants of exec(), including (on Linux) execl(), execle(),
 execlp(), execv(), execvp(), and execvpe(). Why do
 you think there are so many variants of the same basic call?
 
-Respuesta:
+Respuesta: el grupo cree que hay varias variantes de exec() porque se pueden usar para problemas específicos, pero hay una relación entre los siguientes tipos de exec() ya que funcionan casi igual:
+
+  execl() y execv() 
+  execlp() y execvp()
+  execle() y execvpe()
 
 
 # Pregunta 5
@@ -53,7 +57,7 @@ Respuesta:
 to finish in the parent. What does wait() return? What happens if
 you use wait() in the child?
 
-Respuesta:
+Respuesta: wait() retorna el id del proceso hijo, en caso de error retorna -1. Si se usa wait() en el proceso hijo retorna -1, ya que el proceso hijo no tiene un proceso hijo, entonces no hay que esperar que un proceso se cierre.
 
 
 # Pregunta 6
