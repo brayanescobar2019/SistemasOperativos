@@ -20,12 +20,8 @@ int main (int argc, char const *argv[]) {
     else if (rc > 0) // parent
     {
         //  https://www.unix.com/302582537-post2.html?s=c29ed69cf8a6adc4c14984b71e3aa176
-        /*  You can sleep "indefinitely" with the pause() function,
-            defined in <unistd.h>, which will sleep until you receive
-            a signal.You can wake a pause()d thread with pthread_kill() or kill()
-            to send some signal that won't kill it (SIGCONT seems appropriate).
-        */
-        signal(SIGCONT, sig_handler); // install signal handler
+        
+        signal(SIGCONT, sig_handler); 
         pause();
     }
   
