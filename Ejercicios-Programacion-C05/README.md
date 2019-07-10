@@ -31,7 +31,7 @@ print “hello”; the parent process should print “goodbye”. You should
 try to ensure that the child process always prints first; can you do
 this without calling wait() in the parent?
 
-Respuesta: sí se puede
+Respuesta: sí se puede. Se puede dormir el proceso padre "indefinidamente" con la función de pause(), definida en <unistd.h>, que se pondrá en espera hasta que reciba una señal. Puede despertar un hilo pause() con pthread_kill () o kill() para enviar alguna señal. Eso no lo matará (SIGCONT parece apropiado). la referencia de donde se sacó esta información está en:  https://www.unix.com/302582537-post2.html?s=c29ed69cf8a6adc4c14984b71e3aa176
 
 
  # Pregunta 4
