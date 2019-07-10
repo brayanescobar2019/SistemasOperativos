@@ -123,19 +123,10 @@ int funcionShell(char input[200])
             "8. All other command line input is interpreted as program invocation, which should be ",
             "done by the shell forking and execing the programs as its own child processes.",
             "9. myshell <batchfile> the argument is a path from a file that contents a set of commands lines.\n"};
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 14; i++)
         {
             printf("%s", info[i]);
         }
-
-        char *input[200];
-        printf("\n ....show more - press only enter...\n");
-        fgets(input, 100, stdin);
-        for (int i = 7; i < 14; i++)
-        {
-            printf("%s", info[i]);
-        }
-        return 2;
     }
 
     //en caso de que el comando no esté en el programa ejecutamos comandos de linux
