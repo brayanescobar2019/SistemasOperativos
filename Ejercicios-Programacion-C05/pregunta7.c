@@ -6,14 +6,14 @@ int main()
 {
     int rc = fork();
 
-    if (rc == 0) // child process
+    if (rc == 0) // proceso hijo
     {
         close(STDOUT_FILENO);
-        printf("Hello World. Can you see this?\n");
+        printf("Esto no debería verse\n");
     }
-    else if (rc > 0)
+    else if (rc > 0) // proceso padre
     {
         wait(NULL);
-        printf("I am parent process\n");
+        printf("Soy el proceso padre\n");
     }
 }
