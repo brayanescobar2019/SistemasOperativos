@@ -1,7 +1,7 @@
 #### El Shell se compila y se ejecuta:
 
-            gcc Shell.c -o Shell
-            ./Shell
+     gcc Shell.c -o Shell
+     ./Shell
 
 #### y los comandos que se ejecutan son:
 
