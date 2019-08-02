@@ -6,10 +6,9 @@
 #include "mycommon.h"
 
 
-volatile int counter = 0; 
-puerta miPuerta;
+volatile int counter = 0;
+puerta miPuerta; 
 int loops;
-
 
 void *worker(void *arg) {
     int i;
@@ -17,31 +16,30 @@ void *worker(void *arg) {
     for (i = 0; i < loops; i++) {
 	counter++;
     }
-    abrir_puerta(m);
+    abrir_puerta(miPuerta);
     return NULL;
 }
 
 int main(int argc, char *argv[]) {
-    clock_t tiempo_inicio, tiempo_final;
+    clock_t tiempo_inicial, tiempo_final;
     double segundos;
-
-    tiempo_inicio = clock();
-    if (argc != 2) { 
+    tiempo_inicial = clock();
+	if (argc != 2) { 
 	fprintf(stderr, "usage: threads <loops>\n"); 
 	exit(1); 
     } 
-    crear_puerta(miPuerta);
     loops = atoi(argv[1]);
     pthread_t p1, p2;
+    crear_puerta(miPuerta);
     printf("Initial value : %d\n", counter);
     pthread_create(&p1, NULL, worker, NULL); 
     pthread_create(&p2, NULL, worker, NULL);
     pthread_join(p1, NULL);
     pthread_join(p2, NULL);
     printf("Final value   : %d\n", counter);
-    destruir_puerta(miPuerta);
+    destruir_puerta(miPuerta);	
     tiempo_final = clock();
-    segundos = (double) (tiempo_final - tiempo_inicio) / CLOCKS_PER_SEC;
-    printf("%f segundos \n", segundos);
-    return 0;
+    segundos = (double)(tiempo_final - tiempo_inicial)/CLOCKS_PER_SEC;
+    printf("%f segundos\n", segundos);
+	return 0;
 }
