@@ -37,6 +37,7 @@ int main(int argc, char *argv[]) {
     Pthread_join(p1, NULL);
     Pthread_join(p2, NULL);
     printf("Final value   : %d\n", counter);
+    destruir_puerta(miPuerta);	
     tiempo_final = clock();
     segundos = (double)(tiempo_final - tiempo_inicial)/CLOCKS_PER_SEC;
     printf("%f segundos\n", segundos);
