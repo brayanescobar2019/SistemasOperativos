@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 
-float v = 0.0; 
+float v = 1.0; 
 puerta miPuerta;
 
 void *worker1(void *arg){
