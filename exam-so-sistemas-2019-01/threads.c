@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "common.h"
 #include "common_threads.h"
 #include "mycommon.h"
+
 
 volatile int counter = 0;
 puerta miPuerta; 
@@ -19,7 +21,10 @@ void *worker(void *arg) {
 }
 
 int main(int argc, char *argv[]) {
-    if (argc != 2) { 
+    clock_t tiempo_inicial, tiempo_final;
+    double segundos;
+    tiempo_inicio = clock();
+	if (argc != 2) { 
 	fprintf(stderr, "usage: threads <loops>\n"); 
 	exit(1); 
     } 
@@ -32,5 +37,8 @@ int main(int argc, char *argv[]) {
     Pthread_join(p1, NULL);
     Pthread_join(p2, NULL);
     printf("Final value   : %d\n", counter);
-    return 0;
+    tiempo_final = clock();
+    segundos = (double)(tiempo_final - tiempo_inicial)/CLOCKS_PER_SEC;
+    printf("%f segundos\n", segundos);
+	return 0;
 }
