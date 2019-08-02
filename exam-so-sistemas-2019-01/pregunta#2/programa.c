@@ -9,14 +9,16 @@
 float v = 1.0; 
 puerta miPuerta;
 
-void *worker1(void *arg){
+void *worker1(void *arg)
+{
     float y = 350;
     float z = 25;
     v = (z/y) * v;
     return NULL;
 }
 
-void *worker2(void *arg) {
+void *worker2(void *arg)
+{
     sleep(2);
     float x = 1250;
     v= x * v;
@@ -31,6 +33,5 @@ int main(int argc, char *argv[]) {
     pthread_join(p1, NULL);
     pthread_join(p2, NULL);
     printf("valor de v: %f\n", v);
-
     return 0;
 }
