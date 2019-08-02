@@ -19,10 +19,15 @@ void *worker(void *arg) {
 }
 
 int main(int argc, char *argv[]) {
+    clock_t tiempo_inicial, tiempo_final;
+    double segundos;
+    tiempo_inicial = clock();
+	
     if (argc != 2) { 
-	fprintf(stderr, "usage: threads <loops>\n"); 
-	exit(1); 
+    	fprintf(stderr, "usage: threads <loops>\n"); 
+    	exit(1); 
     } 
+	
     loops = atoi(argv[1]);
     pthread_t p1, p2;
     crear_puerta(miPuerta);
@@ -32,5 +37,9 @@ int main(int argc, char *argv[]) {
     Pthread_join(p1, NULL);
     Pthread_join(p2, NULL);
     printf("Final value   : %d\n", counter);
+    tiempo_final = clock();
+    segundos = (double)(tiempo_final - tiempo_inicial)/CLOCKS_PER_SEC;
+    printf("%f segundos\n", segundos);	
     return 0;
+	
 }
