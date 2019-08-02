@@ -23,7 +23,7 @@ void *worker(void *arg) {
 int main(int argc, char *argv[]) {
     clock_t tiempo_inicial, tiempo_final;
     double segundos;
-    tiempo_inicio = clock();
+    tiempo_inicial = clock();
 	if (argc != 2) { 
 	fprintf(stderr, "usage: threads <loops>\n"); 
 	exit(1); 
