@@ -9,12 +9,8 @@
 #include <semaphore.h>
 #endif
 
-##define puerta pthread_mutex_t // nuevo tipo de dato
-#define crear_puerta(m) Pthread_mutex_init(&m,NULL) // funcion para crear puerta
-#define cerrar_puerta(m) Pthread_mutex_lock(&m) // funcion para cerrar la puerta
-#define abrir_puerta(m) Pthread_mutex_unlock(&m) //funcion para abrir la puerta
-#define destruir_puerta(m) pthread_mutex_destroy(&m) // funcion para destruir puerta
-
+#define pthread_create(thread, attr, start_routine, arg) assert(pthread_create(thread, attr, start_routine, arg) == 0);
+#define pthread_join(thread, value_ptr)                  assert(pthread_join(thread, value_ptr) == 0);
 
 #define pthread_mutex_lock(m)                            assert(pthread_mutex_lock(m) == 0);
 #define pthread_mutex_unlock(m)                          assert(pthread_mutex_unlock(m) == 0);
