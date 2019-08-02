@@ -9,7 +9,6 @@
 #include <semaphore.h>
 #endif
 
-#define puerta pthread_mutex_t // nuevo tipo de dato
 #define pthread_create(thread, attr, start_routine, arg) assert(pthread_create(thread, attr, start_routine, arg) == 0);
 #define pthread_join(thread, value_ptr)                  assert(pthread_join(thread, value_ptr) == 0);
 
