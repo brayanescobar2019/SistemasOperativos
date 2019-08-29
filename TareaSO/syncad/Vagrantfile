@@ -4,9 +4,9 @@ Vagrant.configure("2") do |config|
       web_1.vm.box = "ubuntu/xenial64"
 	  config.vm.provider :virtualbox do |vb|
 			vb.customize [ 'modifyvm', :id, '--name', 'demo-00' ]
-		 vb.customize [ 'modifyvm', :id, '--cpus', 1 ]
+		 "vb.customize [ 'modifyvm', :id, '--cpus', 1 ]
 		vb.customize [ 'modifyvm', :id, '--memory', 720 ]
-		vb.customize [ 'modifyvm', :id, '--cpuexecutioncap', 50 ] 
+		vb.customize [ 'modifyvm', :id, '--cpuexecutioncap', 50 ] "
 
 	 end
 	config.vm.provision "shell", path: "script.sh"
